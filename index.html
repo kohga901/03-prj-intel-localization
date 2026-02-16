@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8"/>
@@ -137,12 +137,12 @@
 
           <div class="mb-3">
             <label for="name" class="form-label">Full Name</label>
-            <input type="text" id="name" name="name" class="form-control" autocomplete="name" required>
+            <input type="text" id="name" name="name" class="form-control" autocomplete="name" dir="auto" required>
           </div>
 
           <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" id="email" name="email" class="form-control" autocomplete="email" required>
+            <input type="email" id="email" name="email" class="form-control" autocomplete="email" dir="auto" required>
           </div>
 
           <div class="form-check mb-3">
@@ -212,17 +212,24 @@
 </footer>
 
 <script>
-  
 function updateDirection(){
-  const lang = document.documentElement.lang;
+  const html = document.documentElement;
+  const lang = html.lang;
 
   const rtlLangs = ["ar","he","fa","ur"];
+  const isRTL = rtlLangs.some(l => lang.startsWith(l));
 
-  if(rtlLangs.some(l=>lang.startsWith(l))){
-    document.documentElement.dir="rtl";
-  }else{
-    document.documentElement.dir="ltr";
-  }
+  html.dir = isRTL ? "rtl" : "ltr";
+
+  // force form field direction to match page
+  document.querySelectorAll("input, textarea").forEach(el => {
+    el.dir = isRTL ? "rtl" : "ltr";
+  });
+
+  // emails should stay LTR always
+  document.querySelectorAll('input[type="email"]').forEach(el => {
+    el.dir = "ltr";
+  });
 }
 
 new MutationObserver(updateDirection)
@@ -230,6 +237,9 @@ new MutationObserver(updateDirection)
 
 updateDirection();
 </script>
+
+
+
 
 <script>
 const toggle = document.getElementById("themeToggle");

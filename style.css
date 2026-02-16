@@ -243,3 +243,29 @@ body.light{
   --card:#ffffff;
   --text:#0a0a0a;
 }
+
+input, textarea {
+  direction: inherit;
+  text-align: start;
+}
+
+input[type="email"]{
+  direction:ltr;
+  text-align:start;
+}
+
+html[dir="rtl"] .form-control{
+  direction:rtl;
+  text-align:right;
+}
+
+html[dir="ltr"] .form-control{
+  direction:ltr;
+  text-align:left;
+}
+
+/* email stays logical */
+html[dir="rtl"] input[type="email"]{
+  direction:ltr;
+  text-align:left;
+}
