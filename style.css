@@ -194,3 +194,52 @@ header p{
     font-size:2.4rem;
   }
 }
+
+
+.timeline .card{
+  color: var(--text);
+}
+
+.timeline .card p{
+  opacity:1;
+}
+
+.timeline .card h3{
+  color: var(--text);
+}
+
+
+.feature-icon{
+  font-size:40px;
+  color:var(--accent);
+  display:block;
+  margin-bottom:14px;
+}
+
+.learn-more{
+  display:inline-block;
+  margin-top:14px;
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:600;
+  transition:.25s;
+}
+
+.learn-more:hover{
+  letter-spacing:.5px;
+  opacity:.8;
+}
+
+.learn-more::after{
+  content:" →";
+}
+
+html[dir="rtl"] .learn-more::after{
+  content:" ←";
+}
+
+body.light{
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --text:#0a0a0a;
+}

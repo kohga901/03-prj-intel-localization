@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
   <title>Intel Sustainability Timeline</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
@@ -28,7 +30,7 @@
     <span class="node"></span>
     <h2>1968</h2>
     <h3>Intel Founded</h3>
-    <img src="img/intel-founded.jpg" alt="Early Intel era" loading="lazy"/>
+    <img src="img/intel-founded.jpg" alt="" loading="lazy"/>
     <p>Robert Noyce and Gordon Moore establish Intel.</p>
   </article>
 
@@ -36,7 +38,7 @@
     <span class="node"></span>
     <h2>1971</h2>
     <h3>First Microprocessor</h3>
-    <img src="img/chip-closeup.jpg" alt="Microprocessor chip" loading="lazy"/>
+    <img src="img/chip-closeup.jpg" alt="" loading="lazy"/>
     <p>The Intel 4004 launches modern computing.</p>
   </article>
 
@@ -44,7 +46,7 @@
     <span class="node"></span>
     <h2>1978</h2>
     <h3>8086 Processor</h3>
-    <img src="img/x86-processor.jpg" alt="CPU on motherboard" loading="lazy"/>
+    <img src="img/x86-processor.jpg" alt="" loading="lazy"/>
     <p>x86 architecture becomes the industry backbone.</p>
   </article>
 
@@ -52,7 +54,7 @@
     <span class="node"></span>
     <h2>2006</h2>
     <h3>Peak Emissions</h3>
-    <img src="img/factory-emissions.jpg" alt="Industrial facility" loading="lazy"/>
+    <img src="img/factory-emissions.jpg" alt="" loading="lazy"/>
     <p>Major investments begin in renewable energy.</p>
   </article>
 
@@ -60,7 +62,7 @@
     <span class="node"></span>
     <h2>2020</h2>
     <h3>RISE Strategy</h3>
-    <img src="img/solar-wind-energy.jpg" alt="Solar and wind farm" loading="lazy"/>
+    <img src="img/solar-wind-energy.jpg" alt="" loading="lazy"/>
     <p>Climate action and sustainability accelerate.</p>
   </article>
 
@@ -68,7 +70,7 @@
     <span class="node"></span>
     <h2>2024</h2>
     <h3>Sustainability Summit</h3>
-    <img src="img/sustainability-meeting.jpg" alt="Business sustainability meeting" loading="lazy"/>
+    <img src="img/sustainability-meeting.jpg" alt="" loading="lazy"/>
     <p>Global leaders collaborate on green manufacturing.</p>
   </article>
 
@@ -79,52 +81,167 @@
   <div class="row text-center">
 
     <div class="col-12 col-md-4 mb-4">
-      <div class="p-4 border rounded h-100">
+      <div class="p-4 border rounded h-100 feature-card">
+
+        <i class="bi bi-lightning-charge-fill feature-icon"></i>
+
         <h3>Energy Efficiency</h3>
         <p>Reducing power consumption across manufacturing and processors.</p>
+
+        <a href="#" class="learn-more">Learn More</a>
+
       </div>
     </div>
 
-    <div class="col-12 col-md-4 mb-4">
-      <div class="p-4 border rounded h-100">
-        <h3>Water Conservation</h3>
-        <p>Intel restores more water than it consumes in fabrication plants.</p>
-      </div>
-    </div>
 
-    <div class="col-12 col-md-4 mb-4">
-      <div class="p-4 border rounded h-100">
-        <h3>Carbon Neutral Goals</h3>
-        <p>Net-zero greenhouse gas emissions by 2040.</p>
-      </div>
-    </div>
+      <div class="col-12 col-md-4 mb-4">
+        <div class="p-4 border rounded h-100 feature-card">
 
+          <i class="bi bi-droplet-fill feature-icon"></i>
+
+
+          <h3>Water Conservation</h3>
+          <p>Intel restores more water than it consumes in fabrication plants.</p>
+
+          <a href="#" class="learn-more">Learn More</a>
+
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 mb-4">
+        <div class="p-4 border rounded h-100 feature-card">
+
+          <i class="bi bi-globe-americas feature-icon"></i>
+
+
+          <h3>Carbon Neutral Goals</h3>
+          <p>Net-zero greenhouse gas emissions by 2040.</p>
+
+          <a href="#" class="learn-more">Learn More</a>
+
+
+        </div>
+      </div>
   </div>
 
 </section>
 
+<section class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+
+      <div class="p-4 border rounded">
+        <h2 class="text-center mb-3">Subscribe to Sustainability Updates</h2>
+
+        <form>
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" id="name" name="name" class="form-control" autocomplete="name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" id="email" name="email" class="form-control" autocomplete="email" required>
+          </div>
+
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="agree" name="agree" required>
+            <label class="form-check-label" for="agree">
+              I agree to receive sustainability news.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Subscribe
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="container my-5">
+  <h2 class="text-center mb-4">Sustainability FAQ</h2>
+
+  <div class="accordion" id="faq">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
+        What is Intel’s 2040 goal?
+        </button>
+      </h2>
+      <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+        <div class="accordion-body">
+        Intel aims for net-zero greenhouse gas emissions by 2040.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+
+        How does Intel save water?
+        </button>
+      </h2>
+      <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">
+        Intel restores more water than it consumes globally.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="mt-5 py-4 border-top text-center">
+
+  <p class="mb-2">© 2026 Intel Corporation</p>
+
+  <div class="d-flex justify-content-center gap-3 flex-wrap">
+    <a href="#" class="text-decoration-none">Privacy Policy</a>
+    <a href="#" class="text-decoration-none">Terms of Use</a>
+    <a href="#" class="text-decoration-none">Contact</a>
+  </div>
+
+</footer>
+
+<script>
+  
+function updateDirection(){
+  const lang = document.documentElement.lang;
+
+  const rtlLangs = ["ar","he","fa","ur"];
+
+  if(rtlLangs.some(l=>lang.startsWith(l))){
+    document.documentElement.dir="rtl";
+  }else{
+    document.documentElement.dir="ltr";
+  }
+}
+
+new MutationObserver(updateDirection)
+  .observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});
+
+updateDirection();
+</script>
 
 <script>
 const toggle = document.getElementById("themeToggle");
 
 toggle.onclick = () => {
   document.body.classList.toggle("light");
-
-  // RTL switch
-  const html = document.documentElement;
-  if (html.dir === "rtl") {
-    html.dir = "ltr";
-    html.lang = "en";
-  } else {
-    html.dir = "rtl";
-    html.lang = "ar";
-  }
-
-  toggle.textContent =
-    html.dir === "rtl" ? "LTR" : "RTL";
 };
 </script>
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
